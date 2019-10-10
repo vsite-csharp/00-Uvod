@@ -24,7 +24,13 @@ namespace MyEditor
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (System.IO.StreamReader reader = new System.IO.StreamReader(openFileDialog1.FileName))
+                {
+                    textBox1.Text=reader.ReadToEnd();
+                }
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +47,5 @@ namespace MyEditor
                 }
             }
         }
-      
     }
 }
