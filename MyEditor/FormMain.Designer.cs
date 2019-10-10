@@ -33,10 +33,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(228, 126);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(91, 41);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 78);
+            this.textBox1.Size = new System.Drawing.Size(590, 352);
             this.textBox1.TabIndex = 0;
             // 
             // FormMain
