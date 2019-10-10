@@ -16,5 +16,10 @@ namespace MyEditor
         {
             InitializeComponent();
         }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
