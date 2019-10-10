@@ -40,6 +40,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(0, 27);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -138,6 +140,12 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Text Files | *.txt | All Files | *.*";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +178,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

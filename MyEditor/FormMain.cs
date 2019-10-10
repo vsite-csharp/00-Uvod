@@ -25,7 +25,13 @@ namespace MyEditor
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader loadText = new StreamReader(openFileDialog1.FileName))
+                {
+                    textBox1.Text = loadText.ReadToEnd();
+                }
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +62,11 @@ namespace MyEditor
         }
 
         private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
