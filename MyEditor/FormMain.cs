@@ -31,7 +31,13 @@ namespace MyEditor
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader r = new StreamReader(openFileDialog1.FileName))
+                {
+                   textBox1.Text = r.ReadToEnd();
+                }
+            }
         }
 
         private void lolToolStripMenuItem_Click(object sender, EventArgs e)
