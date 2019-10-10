@@ -67,7 +67,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(791, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -132,7 +131,6 @@
             // saveFileDialog1
             // 
             this.saveFileDialog1.Filter = "Text files | *.txt | All Files | *.*";
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // aboutToolStripMenuItem
             // 
@@ -143,7 +141,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "Text Files|*.txt|All Files|*.*";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // FormMain
             // 
@@ -156,7 +153,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "My Editor";
-            this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
