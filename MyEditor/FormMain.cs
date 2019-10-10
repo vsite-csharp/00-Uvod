@@ -21,5 +21,10 @@ namespace MyEditor
         {
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
