@@ -34,10 +34,11 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.lolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,17 +99,17 @@
             this.saveToolStripMenuItem.Text = "Save...";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(193, 6);
+            // 
             // lolToolStripMenuItem
             // 
             this.lolToolStripMenuItem.Name = "lolToolStripMenuItem";
             this.lolToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.lolToolStripMenuItem.Text = "Exit";
             this.lolToolStripMenuItem.Click += new System.EventHandler(this.lolToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(193, 6);
             // 
             // helpToolStripMenuItem
             // 
@@ -121,8 +122,12 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "About...";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Text files|*.txt|All files|*.*";
             // 
             // FormMain
             // 
@@ -153,6 +158,7 @@
         private System.Windows.Forms.ToolStripMenuItem lolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
