@@ -28,9 +28,20 @@ namespace MyEditor
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName)) 
+                using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName))
                 {
                     writer.Write(textBox1.Text);
+                }
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader reader = new StreamReader(openFileDialog1.FileName))
+                {
+                    textBox1.Text = reader.ReadToEnd();
                 }
             }
         }
