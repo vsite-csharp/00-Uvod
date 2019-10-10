@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +25,24 @@ namespace MyEditor
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           if( saveFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName))
+                {
+                    writer.Write(textBox1.Text);
+                }
 
+            }
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SaveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            
         }
     }
 }
