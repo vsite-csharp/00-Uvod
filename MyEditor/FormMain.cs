@@ -29,7 +29,18 @@ namespace MyEditor
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (System.IO.StreamWriter writter = new System.IO.StreamWriter(saveFileDialog1.FileName)) {
+                    writter.Write(textBox1.Text);
+                }
+            }
+        }
+      
     }
 }
