@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEditor", "MyEditor\MyEditor.csproj", "{D7F62888-C45E-469C-B2CD-996021112442}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7F62888-C45E-469C-B2CD-996021112442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F62888-C45E-469C-B2CD-996021112442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F62888-C45E-469C-B2CD-996021112442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F62888-C45E-469C-B2CD-996021112442}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
