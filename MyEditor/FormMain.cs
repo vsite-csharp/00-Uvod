@@ -26,5 +26,10 @@ namespace MyEditor
         {
 
         }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
