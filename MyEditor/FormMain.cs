@@ -21,5 +21,10 @@ namespace MyEditor
         {
 
         }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
