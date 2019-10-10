@@ -16,5 +16,10 @@ namespace myEditor
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close(); // "this" nije potreban u ovom slucaju
+        }
     }
 }
