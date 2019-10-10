@@ -29,7 +29,13 @@ namespace MyEditor
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using(StreamReader reader = new StreamReader(openFileDialog1.FileName))
+                {
+                    textBox1.Text = reader.ReadToEnd();
+                }
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +55,11 @@ namespace MyEditor
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
