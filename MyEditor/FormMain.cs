@@ -17,15 +17,6 @@ namespace MyEditor
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -52,16 +43,6 @@ namespace MyEditor
                     writer.Write(textBox1.Text);
                 }
             }
-        }
-
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
         }
     }
 }
