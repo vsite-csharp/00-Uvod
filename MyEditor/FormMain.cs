@@ -29,7 +29,7 @@ namespace MyEditor
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {0
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName))
