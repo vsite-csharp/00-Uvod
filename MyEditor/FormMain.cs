@@ -27,7 +27,7 @@ namespace MyEditor
         {
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                using (StreamWriter writer = new StreamWriter(saveFileDialog1.FileName))
+                using (StreamWriter writer =new StreamWriter(saveFileDialog1.FileName))
                 {
                     writer.Write(textBox1.Text);
                 }            
