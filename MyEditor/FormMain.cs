@@ -45,6 +45,6 @@ namespace MyEditor
                     writer.Write(textBox1.Text);
                 }
             }
-        }       
+        }
     }
 }
