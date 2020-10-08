@@ -39,7 +39,7 @@ namespace Form1
 
         private void nameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            textBox.Clear();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
