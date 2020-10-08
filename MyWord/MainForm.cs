@@ -45,7 +45,12 @@ namespace MyWord
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog.ShowDialog(this);
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                var filename = openFileDialog.FileName;
+                using (StreamReader sr = new StreamReader(filename))
+                { sr.Read(TextBox.t); }
+            }
         }
     }
 }
