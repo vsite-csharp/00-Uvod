@@ -16,5 +16,10 @@ namespace MyWord
         {
             InitializeComponent();
         }
+
+        private void exteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
