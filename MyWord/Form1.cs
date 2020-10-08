@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,18 @@ namespace MyWord
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog(this) == DialogResult.OK)
+            {
+                var FileName = saveFileDialog1.FileName;
+                using (StreamWriter sw = new StreamWriter(FileName))
+                {
+                    sw.WriteLine(textBox1.Text);
+                }
+            }
         }
     }
 }
