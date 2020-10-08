@@ -40,5 +40,14 @@ namespace MyWord
             }
 
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var filename = openFileDialog1.FileName;
+            using (StreamWriter sw = new StreamWriter(filename))
+            {
+                sw.Write(textBox.Text);
+            }
+        }
     }
 }
