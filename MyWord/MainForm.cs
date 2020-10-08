@@ -19,7 +19,7 @@ namespace MyWord
 
         private void exteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
