@@ -130,6 +130,10 @@
             this.textBox.Size = new System.Drawing.Size(800, 332);
             this.textBox.TabIndex = 1;
             // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "Text file|*.txt|All files |*.*";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
