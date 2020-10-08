@@ -36,5 +36,15 @@ namespace Form1
         {
 
         }
+
+        private void nameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
