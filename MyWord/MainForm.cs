@@ -29,10 +29,7 @@ namespace MyWord
             textBox.Clear();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -44,6 +41,18 @@ namespace MyWord
                     sw.Write(textBox.Text);
                 }
             }    
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                var filename = openFileDialog.FileName;
+                using(StreamReader sr = new StreamReader(filename))
+                {
+                    textBox.Text = sr.ReadToEnd();
+                }
+            }
         }
     }
 }
