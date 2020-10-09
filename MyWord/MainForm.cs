@@ -59,5 +59,22 @@ namespace MyWord
                 }
             }
         }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog(this)== DialogResult.OK)
+            {
+                var filename = openFileDialog.FileName;
+                using (StreamReader sr = new StreamReader(filename))
+                {
+                    textBox.Text = sr.ReadToEnd();
+                }
+            }
+        }
     }
 }
