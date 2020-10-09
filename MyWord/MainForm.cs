@@ -48,7 +48,6 @@ namespace MyWord
                 var Filename = openFileDialog1.FileName;
                 using (StreamReader sr = new StreamReader(Filename))
                 {
-                    Console.WriteLine(sr.ReadToEnd());
                     textBox.Text = File.ReadAllText(openFileDialog1.FileName);
                 }
 
