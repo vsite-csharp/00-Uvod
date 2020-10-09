@@ -50,9 +50,20 @@ namespace MyWord
                 var filename = saveFileDialog.FileName;
                 using (StreamWritter sw = new StreamWriter(filename)
                 {
-                    sw.Write(textBox.Text;)
+                    sw.Write(textBox.Text);
                 }
             }
+
+        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                var filename = openFileDialog.FileName;
+                using (StreamReader sr = new StreamReader(filename)
+                {
+                    sr.Read(textBox.Text);
+
         }
+    }
     }
 }
