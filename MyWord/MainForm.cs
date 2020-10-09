@@ -18,7 +18,7 @@ namespace MyWord
             InitializeComponent();
         }
 
-        private void exteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -42,6 +42,17 @@ namespace MyWord
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                var fileStream = openFileDialog.OpenFile();
+                using (StreamReader sr = new StreamReader(fileStream))
+                {
+                    var fileContent = sr.ReadToEnd();
+                    textBox.Text = fileContent;
+                }   
+            }
+
 
         }
     }
