@@ -43,12 +43,22 @@ namespace MyWord
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+
+            openFileDialog.InitialDirectory = "c:\\";
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
-                var filename = openFileDialog.FileName;
-                using (StreamReader sr = new StreamReader(filename))
+                filePath = openFileDialog.FileName;
+                var filestreame = openFileDialog.OpenFile();
+                using (StreamReader sr = new StreamReader(filestreame))
                 {
-                    sr.Read(textBox.Text==filename);
+                    fileContent = sr.ReadToEnd();
 
                 }
             }
