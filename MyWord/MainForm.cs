@@ -39,5 +39,25 @@ namespace MyWord
                 }
             }
         }
+
+        private void SetText(string text)
+        {
+            textBox.Text = text;
+        }
+
+            private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                /*var filename = openFileDialog.FileName;
+                using(StreamReader sr = new StreamReader(filename))
+                {
+                    sr.Read(textBox.Text);
+                }*/
+
+                var sr = new StreamReader(openFileDialog.FileName);
+                SetText(sr.ReadToEnd());
+            }
+        }
     }
 }
