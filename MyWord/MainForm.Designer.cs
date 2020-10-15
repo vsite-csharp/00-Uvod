@@ -77,10 +77,10 @@
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "&Open...";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            //this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            //this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            //this.openToolStripMenuItem.Text = "&Open...";
+            //this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 

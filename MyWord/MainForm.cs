@@ -45,9 +45,18 @@ namespace MyWord
             }
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        /*     private void openToolStripMenuItem_Click(object sender, EventArgs e)
+             {
+                 if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+                 {
+                    // var filename = OpenFileDialog.FileName;
+                     using (StreamReader sr = new StreamReader(filename))
+                 } */
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to quit?", "My Word", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            base.OnClosing(e);
         }
     }
 }
