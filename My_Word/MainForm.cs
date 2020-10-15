@@ -47,7 +47,8 @@ namespace My_Word
                 var filename = openFileDialog.FileName;
                 using (StreamReader sr = new StreamReader(filename))
                 {
-                    sr.Read(textBox.Text);
+                    textBox.Text = sr.ReadToEnd();
+
                 }
             }
         }
