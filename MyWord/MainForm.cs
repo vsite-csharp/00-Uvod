@@ -54,5 +54,14 @@ namespace MyWord
                 { textBox.Text = sr.ReadToEnd(); }
             }
         }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+        }
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

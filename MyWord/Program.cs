@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyWord
@@ -14,7 +11,7 @@ namespace MyWord
         [STAThread]
         static void Main()
         {
-                SetProcessDPIAware();
+            SetProcessDPIAware();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
