@@ -13,30 +13,18 @@ namespace MyWord
 {
     public partial class Form1 : Form
     {
+        public object MessageBoxButton { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        }    
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            textBox.Clear();
-        }
+       
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -49,5 +37,13 @@ namespace MyWord
                 }
             }
         }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to quit?", "My Word", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+            base.OnClosing(e);
+        }
+
     }
 }
