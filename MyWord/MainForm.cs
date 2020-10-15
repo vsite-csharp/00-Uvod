@@ -39,6 +39,12 @@ namespace MyWord
                 }
             }
         }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (MessageBox.Show("Are you shure to quite?", "My Word", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+            base.OnClosing(e);
+        }
 
         private void SetText(string text)
         {
