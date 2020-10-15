@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,6 +63,12 @@ namespace MyWord
 
                 }
             }
+        }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+          if(  MessageBox.Show("Are you sure you want to quit?", "My word", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+            base.OnClosing(e);
         }
     }
 }
