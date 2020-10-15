@@ -60,7 +60,6 @@ namespace MyWord
                 using (StreamReader sr = new StreamReader(filestreame))
                 {
                     fileContent = sr.ReadToEnd();
-
                 }
             }
         }
