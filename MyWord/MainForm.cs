@@ -76,5 +76,12 @@ namespace MyWord
                 }
             }
         }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to quit", "My word", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.No) {
+                e.Cancel = true;
+                base.OnClosing(e);
+            };
+        }
     }
 }
