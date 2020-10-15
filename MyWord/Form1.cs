@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,11 +49,26 @@ namespace MyWord
                     sw.WriteLine(textBox1.Text);
                 }
             }
+         
         }
-
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to quit?", "My Word", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+            base.OnClosing(e);
+        }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            var FileName = saveFileDialog1.FileName;
+            using (StreamReader sr = new StreamReader(FileName))
+            {
+                sr.ReadLine();
+            }
         }
     }
 }
