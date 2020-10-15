@@ -57,8 +57,9 @@ namespace MyWord
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            base.OnClosing(e);
-        }
+            if (MessageBox.Show("Are you sure you want to quit?", "MyWord", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+                 }
         private void textBox_TextChanged(object sender, EventArgs e)
         {
 
