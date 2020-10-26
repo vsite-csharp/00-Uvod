@@ -59,5 +59,22 @@ namespace MyWord
         {
 
         }
+
+        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                var filename = openFileDialog.FileName;
+                using (StreamReader sr = new StreamReader(filename))
+                {
+                    sr.Read(textBox.txt);
+                }
+            }
+        }
+
+        private void saveFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
