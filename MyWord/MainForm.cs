@@ -21,5 +21,10 @@ namespace MyWord
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
