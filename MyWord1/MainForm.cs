@@ -31,5 +31,10 @@ namespace MyWord1
         {
             Close();
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox.Clear();
+        }
     }
 }
